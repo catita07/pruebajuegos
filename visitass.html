@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>visitas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='visitas.css') }}">
+   
+</head>
+<body>
+    <div class="visitas">
+    <h1><em>Has visitado esta página {{ visitas }} veces</em></h1>
+    <p> <em>Se ha reiniciado el contador {{ reinicios }} veces</em> </p>
+    <button class="boton" onclick="window.location.href='/sumar_dos'">Sumar</button>
+    <button class="boton" onclick="window.location.href='/reiniciar'">Reiniciar</button><br>
+    <form  method="POST" action="/sumar_valor">
+        <input type="number" name="valor">
+        <input class="boton" type="submit" value="Sumar Valor">
+    </form>
+    <a href="/destruir_sesion">Eliminar Sesion</a>
+    </div>
+    
+</body>
+</html>
+<!-- para estaprueba use mas de una fuente de informacion, entre estas estan, videos de youtube,chat gpt, clases grabadas, orientacion 
+ de personas externas -->
